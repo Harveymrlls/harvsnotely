@@ -1,0 +1,211 @@
+.navbar {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.nav-span{
+    color: #7B542F;
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
+.nav-span:hover{
+    color: #E9B63B;
+}
+.navlogin{
+    font-weight: bold;
+    background-color: #F5C857;
+}
+.navsignup{
+    font-weight: bold;
+    background-color: #F5C857;
+    
+
+}
+.navlogin:hover{
+    background-color: #F0E491;
+
+}
+.navsignup:hover{
+    background-color: #F0E491;
+}
+.navdash{
+    font-weight: bold;
+    background-color: #F5C857;
+}
+.navdash:hover{
+    background-color: #F0E491;
+}
+.navarch{
+    font-weight: bold;
+    background-color: #F5C857;
+}
+.navarch:hover{
+    background-color: #F0E491;
+}
+
+.bg-gradient{
+    background: linear-gradient(to bottom right, #FFF2C6, #DDC57A);
+}
+/* Mobile Navigation Styles */
+.mobile-nav-item {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: white;
+}
+
+/* Smooth mobile menu animations */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.block {
+    max-height: 500px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+/* Mobile menu button animation */
+#mobile-menu-button {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-button:hover {
+    transform: scale(1.1);
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 767px) {
+    /* Adjust navigation padding for mobile */
+    .navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Ensure mobile menu items are easily tappable */
+    .mobile-nav-item {
+        min-height: 44px; /* Minimum touch target size */
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Adjust flash message position for mobile */
+    #flash-message {
+        right: 1rem;
+        left: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .nav-span {
+        font-size: 1.1rem;
+    }
+}
+
+/* Improved focus states for accessibility */
+.mobile-nav-item:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+#mobile-menu-button:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* Loading state for mobile menu */
+.mobile-menu-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Backdrop for mobile menu (optional) */
+.mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+/* Ensure content doesn't jump when mobile menu opens */
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+/* Enhanced mobile typography */
+@media (max-width: 767px) {
+    .nav-brand-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile-first responsive utilities */
+.sm-only {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .sm-only {
+        display: block;
+    }
+}
+
+/* Touch-friendly button sizes for mobile */
+@media (max-width: 767px) {
+    .nav-button {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Modal animations */
+#modalContent {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for modal */
+#modalBody::-webkit-scrollbar {
+    width: 6px;
+}
+#modalBody::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+#modalBody::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border-radius: 3px;
+}
+
+#modalBody::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Note card cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
